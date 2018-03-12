@@ -256,6 +256,8 @@
         // Reset the scroll of the table to the top.
         self.$element.scrollTop(0);
         self.render();
+        // Reset the total count.
+        $('.scroll-table-total', self.$tableHead).text(self.rows.length);
     };
 
     /**
@@ -266,17 +268,18 @@
     ScrollTable.prototype.filter = function (column, value) {
         /** @type ScrollTable */
         var self = this;
+        var filteredData;
         if (value.length > 0) {
             value = value.toLowerCase();
-            var filteredData = self.data.filter(function (item) {
+            filteredData = self.data.filter(function (item) {
                 // Convert every data to a lower case string and find a match.
                 return (item[column] + '').toLowerCase().indexOf(value) !== -1;
             });
-            self.processData(filteredData);
-            self.reset();
-            // Set the total count according to the filtered data.
-            $('.scroll-table-total', self.$tableHead).text(self.rows.length);
+        } else {
+            filteredData = self.data;
         }
+        self.processData(filteredData);
+        self.reset();
     };
 
     // This function is used to clear out the applied filters.
@@ -326,12 +329,10 @@
     // Bind events to the dynamic elements.
     $d
         .on('keyup', '.scroll-table-filter-input', function (event) {
-            if (event.which === 13) {
-                var $this = $(this);
-                // Get the ScrollTable instance of the table which filter input is a part of.
-                var scrollTable = $this.parent().parent().parent().parent().parent().data('ScrollTable');
-                scrollTable.filter($this.data('column'), $this.val());
-            }
+            var $this = $(this);
+            // Get the ScrollTable instance of the table which filter input is a part of.
+            var scrollTable = $this.parent().parent().parent().parent().parent().data('ScrollTable');
+            scrollTable.filter($this.data('column'), $this.val());
         })
         .on('click', '.scroll-table-clear-filter', function () {
             // Get the ScrollTable instance of the table which clear filter button is a part of.
