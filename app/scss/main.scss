@@ -82,10 +82,8 @@ body {
       text-align: center;
     }
 
-    tr:last-child {
-      td {
-        border-bottom: none;
-      }
+    td {
+      border-bottom: none;
     }
 
     tr.empty {

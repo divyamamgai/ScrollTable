@@ -63,7 +63,7 @@ body {
       background-color: #212121;
       color: #F4F4F4;
       text-align: center; }
-    .scroll-table .scroll-table-table tr:last-child td {
+    .scroll-table .scroll-table-table td {
       border-bottom: none; }
     .scroll-table .scroll-table-table tr.empty {
       display: none; }

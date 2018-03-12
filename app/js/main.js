@@ -251,7 +251,9 @@
         /** @type ScrollTable */
         var self = this;
         // Hide all of the rows initially, required rows will be automatically shown.
-        self.$tableBody.children().addClass('empty');
+        self.$tableBody.children().each(function () {
+            this.className = 'empty';
+        });
         self.currentDataGroup = 0;
         // Reset the scroll of the table to the top.
         self.$element.scrollTop(0);
