@@ -1,0 +1,58 @@
+*, *:after, *:before {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #424242;
+  background: #F4F4F4; }
+
+.heading {
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase; }
+
+.scroll-table {
+  width: 102rem;
+  margin: 1.5rem auto;
+  font-size: 1.3rem;
+  border: solid 0.1rem #212121;
+  max-height: 50rem;
+  overflow: auto;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+  .scroll-table .scroll-table-table {
+    width: 100%;
+    border-collapse: collapse; }
+    .scroll-table .scroll-table-table thead, .scroll-table .scroll-table-table tbody {
+      display: block;
+      width: 100%; }
+    .scroll-table .scroll-table-table thead {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .scroll-table .scroll-table-table td, .scroll-table .scroll-table-table th {
+      width: 25rem;
+      max-width: 25rem;
+      border: solid 0.1rem #212121;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 1rem; }
+      .scroll-table .scroll-table-table td:first-child, .scroll-table .scroll-table-table th:first-child {
+        border-left: none; }
+    .scroll-table .scroll-table-table th {
+      background-color: #212121;
+      color: #F4F4F4;
+      text-align: center; }
+    .scroll-table .scroll-table-table tr:last-child td {
+      border-bottom: none; }
