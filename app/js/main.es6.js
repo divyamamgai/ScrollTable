@@ -77,18 +77,13 @@
     ScrollTable.prototype.processData = function (data) {
         /** @type ScrollTable */
         var self = this;
-        self.cols = [];
-        self.rows = [];
-        // Check for empty data.
-        if (data.length > 0) {
-            // Store only the columns. Since each entry in the array is identical we can use only the first
-            // entry to get columns.
-            self.cols = Object.keys(data[0]);
-            // Convert the object to array for faster insertion.
-            self.rows = $.map(data, function (item) {
-                return [Object.values(item)];
-            });
-        }
+        // Store only the columns. Since each entry in the array is identical we can use only the first
+        // entry to get columns.
+        self.cols = Object.keys(data[0]);
+        // Convert the object to array for faster insertion.
+        self.rows = $.map(data, function (item) {
+            return [Object.values(item)];
+        });
         // Calculate total number of groups for our data set.
         this.totalDataGroups = Math.floor(self.rows.length / self.options.groupSize);
     };
