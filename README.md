@@ -1,4 +1,4 @@
-# Contacts
+# Scroll Table
 ##### Installation
 To install all of the dependencies execute the following command in node -
 ```
@@ -8,10 +8,15 @@ npm install
 ###### Building
 To build the project execute the following gulp task in node -
 ```
-gulp build
+gulp build:dist
 ```
-###### Running
-To run or watch the project execute the following gulp taks in node -
+###### Development
+To watch the project while developing, execute the following gulp task in node -
 ```
 gulp watch
+```
+###### Running
+To run the project execute the following gulp task in node -
+```
+gulp serve
 ```
