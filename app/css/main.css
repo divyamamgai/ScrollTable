@@ -40,6 +40,15 @@ body {
       top: 0;
       left: 0;
       z-index: 1; }
+      .scroll-table .scroll-table-table thead input {
+        display: block;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+        margin: 0;
+        border: none;
+        color: #212121;
+        outline: none; }
     .scroll-table .scroll-table-table td, .scroll-table .scroll-table-table th {
       width: 25rem;
       max-width: 25rem;
@@ -56,3 +65,14 @@ body {
       text-align: center; }
     .scroll-table .scroll-table-table tr:last-child td {
       border-bottom: none; }
+    .scroll-table .scroll-table-table tr.empty {
+      display: none; }
+    .scroll-table .scroll-table-table .scroll-table-info {
+      text-align: left; }
+      .scroll-table .scroll-table-table .scroll-table-info .scroll-table-clear-filter {
+        color: #cdcdcd;
+        float: right;
+        cursor: pointer;
+        text-decoration: none; }
+        .scroll-table .scroll-table-table .scroll-table-info .scroll-table-clear-filter:hover {
+          color: #FFFFFF; }

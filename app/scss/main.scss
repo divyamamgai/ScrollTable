@@ -49,6 +49,17 @@ body {
       top: 0;
       left: 0;
       z-index: 1;
+
+      input {
+        display: block;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+        margin: 0;
+        border: none;
+        color: #212121;
+        outline: none;
+      }
     }
 
     td, th {
@@ -74,6 +85,25 @@ body {
     tr:last-child {
       td {
         border-bottom: none;
+      }
+    }
+
+    tr.empty {
+      display: none;
+    }
+
+    .scroll-table-info {
+      text-align: left;
+
+      .scroll-table-clear-filter {
+        color: #cdcdcd;
+        float: right;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          color: #FFFFFF;
+        }
       }
     }
   }
