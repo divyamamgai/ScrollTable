@@ -20,3 +20,6 @@ To run the project execute the following gulp task in node -
 ```
 gulp serve
 ```
+
+###### Demo
+https://divyamamgai.github.io/ScrollTable/dist/
